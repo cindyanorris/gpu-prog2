@@ -8,7 +8,7 @@ NVCCFLAGS = -c -m64 -Xptxas -v
 #Optimization flags. No debugging.
 #NVCCFLAGS = -c -m64 -O2 -Xptxas -O2,-v
 
-#No optimization and debugging flags. Use this for debugging.
+#No optimizations. Debugging flags. Use this for debugging.
 #NVCCFLAGS = -g -G -m64 --compiler-options -Wall
 
 OBJS = wrappers.o vecAdd.o h_vecAdd.o d_vecAdd.o
