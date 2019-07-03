@@ -1,0 +1,41 @@
+
+The makefile allows the code to be compile with or without 
+optimizations turned on and with or without the flags needed
+for debugging.  Initially, it should be compiled without 
+the optimization and debugging flags.  If you change the
+makefile, you'll need to type make clean and then make
+to create a new executable.
+
+1) Run the program with a vector size of 1,000,000.  
+(You'll need to omit the commas in the input to the program.)
+What is the speedup?
+
+2) Run the program with a vector size of 10,000,000.  What is
+the speedup?  
+
+2) Run the program with a vector size of 100,000,000.  What is
+the speedup?  
+
+3) Why do you think the CPU performs better than the GPU for 
+smaller vector sizes?
+
+4) Now, modify the makefile by commenting out the NVCCFLAGS 
+that do not enable optimizations and uncommenting out the
+NVCCFLAGS that enable optimizations.  Type, make clean and
+make.  Run the program with a vector size of 100,000,000.
+(You'll see that the optimizing compiler enables the
+CPU version to easily outperform the GPU version.)
+What is the speedup?
+
+5) Consider a vector size of 1,000,000.  
+a. How many blocks are created by a kernel launch? 
+b. How many threads per block?
+c. What is the total number of threads?
+d. How many of the threads will perform a vector addition?
+
+6) Consider a vector size of 1048576 (2**20).
+a. How many blocks are created by a kernel launch? 
+b. How many threads per block?
+c. What is the total number of threads?
+d. How many of the threads will perform a vector addition?
+
