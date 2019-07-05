@@ -24,7 +24,10 @@ that do not enable optimizations and uncommenting out the
 NVCCFLAGS that enable optimizations.  Type, make clean and
 make.  Run the program with a vector size of 100,000,000.
 (You'll see that the optimizing compiler enables the
-CPU version to easily outperform the GPU version.)
+CPU version to easily outperform the GPU version. This GPU
+code introduces a lot of overhead. Lots of threads are created
+that do very little work.  Later, we'll investigate methods
+for improvement.)
 What is the speedup?
 
 5) Consider a vector size of 1,000,000.  

@@ -3,13 +3,13 @@ CC = g++
 GENCODE_FLAGS = -arch=sm_30
 
 #No optmization flags and no debugging.
-NVCCFLAGS = -c -m64 -Xptxas -v 
+NVCCFLAGS = -c -m64 -Xptxas -v --compiler-options -Wall
 
 #Optimization flags. No debugging.
-#NVCCFLAGS = -c -m64 -O2 -Xptxas -O2,-v
+#NVCCFLAGS = -c -m64 -O2 -Xptxas -O2,-v --compiler-options -Wall
 
-#No optimizations. Debugging flags. Use this for debugging.
-#NVCCFLAGS = -g -G -m64 --compiler-options -Wall
+#No optimization. Use this for debugging.
+#NVCCFLAGS = -c -g -G -m64 --compiler-options -Wall
 
 OBJS = wrappers.o vecAdd.o h_vecAdd.o d_vecAdd.o
 .SUFFIXES: .cu .o .h 
