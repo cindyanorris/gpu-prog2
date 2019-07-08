@@ -32,9 +32,8 @@ float d_vecAdd(float* A, float* B, float* C, int n)
     //1) create vectors on the device
     //2) copy A and B vectors into device vectors
     //3) launch the kernel
-    //4) wait for the kernel threads to complete
-    //5) copy the result vector into the C vector
-    //6) free space allocated for vectors on the device
+    //4) copy the result vector into the C vector
+    //5) free space allocated for vectors on the device
     //Don't forget to use the CHECK macro on your cuda calls
 
     CHECK(cudaEventRecord(stop_gpu));
